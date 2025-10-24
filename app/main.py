@@ -1,17 +1,17 @@
 from fastapi import FastAPI
-# Asegúrate de que todos los routers estén importados
-from .routers import client_auth, client_menu, client_cart
+from .routers import client_auth, client_menu, client_cart, admin_auth, client_orders, admin_menu, admin_orders
 
 app = FastAPI(
     title="API para App de Restaurante",
     version="1.0.0"
 )
 
-# --- CORRECCIÓN ---
-# Incluir TODOS los routers en la aplicación principal
 app.include_router(client_auth.router)
 app.include_router(client_menu.router)
 app.include_router(client_cart.router)
+app.include_router(admin_auth.router)
+app.include_router(client_orders.router)
+app.include_router(admin_orders.router)
 
 @app.get("/", tags=["Root"])
 def read_root():
