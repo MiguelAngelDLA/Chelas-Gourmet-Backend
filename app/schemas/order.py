@@ -15,14 +15,14 @@ class OrderHistoryItem(BaseModel):
 
     class Config:
         from_attributes = True
-        fields = {'orderId': 'id', 'date': 'created_at'} # Mapeo
+        fields = {'orderId': 'id', 'date': 'created_at'} 
 
 class OrderResponse(BaseModel):
     orderId: uuid.UUID
     status: str
     total: float
-    estimatedDeliveryTime: str = "30-45 minutos" # Valor de ejemplo
+    estimatedDeliveryTime: str = "30-45 minutos" 
 
     class Config:
         from_attributes = True
-        fields = {'orderId': 'id'} # Mapeo
+        fields = {'orderId': 'id'} 

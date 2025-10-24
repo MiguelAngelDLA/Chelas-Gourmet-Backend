@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .routers import client_auth, client_menu, client_cart, admin_auth, client_orders, admin_menu, admin_orders
+from .routers import client_auth, client_menu, client_cart, admin_auth, client_orders
 
 app = FastAPI(
     title="API para App de Restaurante",
@@ -11,7 +11,6 @@ app.include_router(client_menu.router)
 app.include_router(client_cart.router)
 app.include_router(admin_auth.router)
 app.include_router(client_orders.router)
-app.include_router(admin_orders.router)
 
 @app.get("/", tags=["Root"])
 def read_root():
