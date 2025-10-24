@@ -1,1 +1,6 @@
 fastapi[standard]
+sqlalchemy
+python-jose
+psycopg2-binary
+passlib
+python-dotenv
