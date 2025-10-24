@@ -14,5 +14,4 @@ app.include_router(client_orders.router)
 
 @app.get("/", tags=["Root"])
 def read_root():
-    """Punto de entrada principal de la API."""
     return {"message": "Bienvenido a la API del Restaurante"}
